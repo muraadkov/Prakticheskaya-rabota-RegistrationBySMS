@@ -36,6 +36,7 @@ namespace Registration
             catch(ArgumentException)
             {
                 Console.WriteLine("Логин не соответствует требованиям");
+                throw new ArgumentException();
             }
             Console.WriteLine("Введите e-mail: ");
             user.Email = Console.ReadLine();
@@ -49,6 +50,7 @@ namespace Registration
             catch (ArgumentException)
             {
                 Console.WriteLine("E-mail не соответствует требованиям");
+                throw new ArgumentException();
             }
             Console.WriteLine("Введите пароль: ");
             user.Password = ReadPassword();
@@ -62,6 +64,7 @@ namespace Registration
             catch (ArgumentException)
             {
                 Console.WriteLine("Пароль не соответствует требованиям");
+                throw new ArgumentException();
             }
             try
             {
@@ -73,6 +76,7 @@ namespace Registration
             catch (ArgumentException)
             {
                 Console.WriteLine("Пароль не соответствует требованиям");
+                throw new ArgumentException();
             }
             try
             {
@@ -84,6 +88,7 @@ namespace Registration
             catch (ArgumentException)
             {
                 Console.WriteLine("Пароль не соответствует требованиям");
+                throw new ArgumentException();
             }
             Console.WriteLine("Повторите пароль: ");
             user.DoublePassword = ReadPassword();
@@ -96,6 +101,7 @@ namespace Registration
             catch (ArgumentException)
             {
                 Console.WriteLine("Пароли не совпадают");
+                throw new ArgumentException();
             }
             Console.WriteLine("Введите номер телефона: ");
             user.MobileNumber = Console.ReadLine();
@@ -108,6 +114,7 @@ namespace Registration
             catch(ArgumentException)
             {
                 throw new ArgumentException("Мобильный телефон неверный");
+                throw new ArgumentException();
             }
 
         }
